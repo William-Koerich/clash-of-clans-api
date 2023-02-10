@@ -1,0 +1,39 @@
+{
+  "name": "clash-of-clans-api",
+  "version": "0.6.4",
+  "description": "Clash of Clans API module",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CaptEmulation/clash-of-clans-api"
+  },
+  "author": "CaptEmulation <john.holmes.dean@gmail.com>",
+  "contributors": [
+    "Taffy IX <taffy.ix@gmail.com>",
+    "Guillaume Delacour <gui@iroqwa.org>",
+    "Fernando Moreno <fermore80@hotmail.com>"
+  ],
+  "scripts": {
+    "test": "mocha --require @babel/register test",
+    "test:integration": "mocha --require @babel/register integration",
+    "build": "babel src -d dist",
+    "build:watch": "npm run build -- -watch",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "sinon": "^9.0.1"
+  },
+  "dependencies": {
+    "chokidar": "^3.3.1",
+    "lodash": "^4.17.15",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
